@@ -3,5 +3,8 @@
 .env
 \env
 
+#database
+\emb
+
 Pipfile
 Pipfile.lock
