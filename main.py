@@ -21,8 +21,7 @@ text_splitter = CharacterTextSplitter(
 loader = TextLoader("facts.txt")
 docs = loader.load_and_split(text_splitter = text_splitter)
 
-#initialize Chroma vector database
-#and calculate embeddings
+#initialize Chroma vector database and calculate embeddings
 db = Chroma.from_documents(
     docs, #
     embedding = embeddings,
