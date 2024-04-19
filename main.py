@@ -23,12 +23,13 @@ docs = loader.load_and_split(text_splitter = text_splitter)
 
 #initialize Chroma vector database and calculate embeddings
 db = Chroma.from_documents(
-    docs, #
+    docs,
     embedding = embeddings,
     persist_directory = "emb"
     )
 
 
+#search database for an answer
 results = db.similarity_search_with_score(
     "What is an interesting fact about the English language",
     k=3                                                                 #number of results
