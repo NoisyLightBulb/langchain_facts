@@ -21,6 +21,7 @@ db = Chroma(
 )
 
 #initializing retriever
+#custom retriever makes sure that no duplicates are returned
 retriever = RedundantFilterRetriever(
     embeddings = embeddings,
     chroma = db
